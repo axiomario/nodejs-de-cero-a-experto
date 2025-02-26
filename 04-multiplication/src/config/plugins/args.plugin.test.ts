@@ -19,8 +19,7 @@ describe('Args plugin', () => {
     test('should return default values', async () => {
         const base = 8;
         const args = await runCommand(['--base', `${ base }`]);
-
-        console.log(args);
+        
         expect(args).toEqual(expect.objectContaining({
             base,
             limit: 10,
@@ -44,7 +43,6 @@ describe('Args plugin', () => {
             '--destination', `${ destination }`,
         ]);
 
-        console.log(args);
         expect(args).toEqual(expect.objectContaining({
             base,
             limit,
